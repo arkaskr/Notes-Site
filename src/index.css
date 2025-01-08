@@ -1,3 +1,11 @@
+body{
+  background-color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 h1{
   text-align: center;
   margin-top: 10px;
@@ -15,6 +23,7 @@ h1{
   display: block;
   align-self: center;
   align-items: stretch;
+  margin-bottom: 2rem;
 }
 
 .input{
@@ -44,7 +53,7 @@ label{
 h2{
   color: rgb(98, 0, 255);
   text-align: center;
-  margin-top: 10px;
+  margin-top: 1.5rem;
   font-size: 2rem;
  
  }
@@ -64,4 +73,31 @@ h2{
 
 .btn:hover{
    cursor: pointer;
+}
+
+.notes {
+  margin: auto;
+  max-width: 50%;
+  background-color: rgb(92, 85, 226);
+  border-radius: 1rem;
+  color: rgb(255, 255, 255);
+  padding-left: 1.2rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  border: 2px solid white;
+  display: block;
+}
+
+.delete {
+  background-color: red;
+  margin-left: 48rem;
+  color: white;
+  border-radius: 0.7rem;
+  border: 2px solid black;
+  height: 1.8rem;
+  width: 5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  cursor: pointer;
 }

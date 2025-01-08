@@ -3,9 +3,18 @@ export default function Front(){
 
     const[title,setTitle]=useState("");
     const[content,setContent]=useState("");
+    const[notes,setNotes]=useState([]);
 
     function handleSubmit(e){
         e.preventDefault();
+
+        setNotes([{title,content}, ...notes]);
+        setTitle("");
+        setContent("");
+    }
+
+    function removeNote(i){
+        setNotes(notes.filter((note,index)=>i!==index));
     }
 
     return(
@@ -40,6 +49,18 @@ export default function Front(){
         <hr/>
 
         <h2>Notes</h2>
+
+        {notes.map((note,i)=>(
+            <div className="notes" key={i}>
+                <h3>{note.title}</h3>
+                <p>{note.content}</p>
+
+                <div className="delbtn">
+                    <button className="delete"
+                            onClick={()=>removeNote(i)}>Delete</button>
+                </div>
+            </div>
+        ))}
         </>
     )
 }
